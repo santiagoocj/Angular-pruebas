@@ -1,1 +1,19 @@
-<p>{{title}}</p>
+<div class="container mt-4">
+    <div>
+        <h1>{{title}}</h1>
+        <p>Hola mi nombre es {{nombre}}</p>
+        <p>La suma de 10 + 20 = {{getSuma(10,20)}}</p>
+        <input type="text" class="form-control" [placeholder]="textoPlaceHolder" [disabled]="desabilitado">
+        <img [src]="imagenboostrap" alt="img" width="100%" height="400px">
+    </div>
+    <div>
+        <h3>{{texto}}</h3>
+        <button class="btn btn-primary" (click)="cambiarTexto()">Click me!</button>
+    </div>
+    <div>
+        <input type="text" class="form-control" placeholder="Escriba algo aquí" [(ngModel)]="twoWayDataBinding">
+        <br>
+        {{twoWayDataBinding}}
+    </div>
+</div>
+<app-directivas></app-directivas>
